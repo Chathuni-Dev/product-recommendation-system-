@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Recommendations</title>
+    <style>
+        body {
+            background-color: #ccffcc; /* Light green background */
+        }
+        .heading {
+            color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">ProReco - Product Recommendation System</h1>
+    <h2>Product Recommendations for Customer {{ customer_id }}</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Stock Code</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+                <tr>
+                    <td>{{ product.Rec1_StockCode }}</td>
+                    <td>{{ product.Rec1_Description }}</td>
+                </tr>
+                <tr>
+                    <td>{{ product.Rec2_StockCode }}</td>
+                    <td>{{ product.Rec2_Description }}</td>
+                </tr>
+                <tr>
+                    <td>{{ product.Rec3_StockCode }}</td>
+                    <td>{{ product.Rec3_Description }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
